@@ -1,0 +1,22 @@
+#HomePage {
+    display: flex;
+    align-items: center;
+  
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    max-height: 100vh;
+    margin-top: 5rem;
+    
+}
+
+.body > input {
+    width: 15rem;
+    
+}
+
+.body > Button {
+    width: 15rem;
+}
