@@ -6,8 +6,8 @@ export const Header = () => {
   const navigate = useNavigate()
   
   const cleanStorage = () => {
-    localStorage.clear()
-     navigate('/')
+    // localStorage.clear()
+       navigate('/')
   }
   return (
     <header className="flex justify-content-around align-items-center bg-gray-500 p-4">

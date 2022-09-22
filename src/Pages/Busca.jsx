@@ -11,9 +11,6 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Header } from '../components/Header'
 
-
-
-
 const Busca = () => {
 
   const [input, setInput] = useState('')
@@ -35,6 +32,8 @@ const Busca = () => {
       
     }
   }
+
+  const usuario = localStorage.getItem('Nome')
  
   function enterAddCont(e) {
     if (e.code === 'NumpadEnter') {
@@ -43,15 +42,14 @@ const Busca = () => {
    }
   
   
-  const user = localStorage.getItem('usuario');
-
+  
   return (
     <Fragment>
       <Header />
       <body className="container  bg-indigo-300">
         <div className='title'>
            
-          <h1 >Bem vindo! <span id="user" >  {user} </span>, Vocé está logado. </h1>
+          <h1 >Bem vindo! <span id="user" > {usuario} </span>, Vocé está logado. </h1>
           </div>
           <div className="col-3.5 md:col-3.5 ">
           <h2>Buscador de Endereços</h2>
