@@ -15,13 +15,9 @@ function Busca(){
 
   const [input, setInput] = useState('')
   const [cep, setCep] = useState({})
-
   
-  
-
   async function searchCep() {
-  
-    try {
+     try {
       const response = await api.get(`${input}/json`)
       setCep(response.data)
       setInput("")
@@ -34,14 +30,12 @@ function Busca(){
   }
 
   const usuario = localStorage.getItem('Nome')
- 
+
   function enterAddCont(e) {
     if (e.code === 'NumpadEnter') {
       searchCep()
     }
    }
-  
-  
   
   return (
     <Fragment>
