@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-height: 60vh;
+    min-height: 60vh;
     margin-top: 1rem;
   
     

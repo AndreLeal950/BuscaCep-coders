@@ -7,33 +7,24 @@ import { Header } from "../components/Header";
 
 import '../styles/Login.css'
 
-const nomes = ['Galdanf', 'Sauron', 'Luke'] 
 
 export const Login = () => {
   
   const [user, setUser] = useState('');
   
   const navigate = useNavigate();
+  
+  const nomes = ['Galdanf', 'Sauron', 'Luke'] 
 
-
-  const CepLogin = () => {
-    
-    localStorage.setItem('Nome', nomes)
-    
-    if (nomes !== user) {
+  const CepLogin = (nome) => {
+    if (nomes.includes(nome)) {
       
-      navigate('/NotPermission')
+      return navigate('/busca')
       
-    } else {
-      
-      navigate('/busca', { state: `Seja bem vindo(a) ${user}` })
-    }
-       
-     
-     setUser('')      
+    }else return navigate('/NotPermission')
   }
   
-  return (
+return (
     <>
       <Header />
       <div id="HomePage" className="flex justify-content-between flex-column w-full h-screen bg-indigo-300">

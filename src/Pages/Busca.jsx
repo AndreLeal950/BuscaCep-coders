@@ -11,7 +11,7 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Header } from '../components/Header'
 
-const Busca = () => {
+function Busca(){
 
   const [input, setInput] = useState('')
   const [cep, setCep] = useState({})
