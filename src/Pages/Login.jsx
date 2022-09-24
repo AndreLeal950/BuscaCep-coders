@@ -21,7 +21,9 @@ export const Login = () => {
       
       return navigate('/busca')
            
-    } else return navigate('/NotPermission')
+    } else return navigate('/NotPermission') 
+      
+      
   }
 
   useEffect(() => {
